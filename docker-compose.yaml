@@ -1,0 +1,15 @@
+services:
+
+  postgres_db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=db_docker_sample_postgres
+      - POSTGRES_PASSWORD=50403010
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432" # default postgres port
+    volumes:
+      - data_pg_sample:/var/lib/postgresql/data
+
+volumes:
+  data_pg_sample:
